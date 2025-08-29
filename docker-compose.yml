@@ -7,8 +7,6 @@ services:
       dockerfile: Dockerfile
     container_name: hbci-rest-client
     restart: unless-stopped
-    ports:
-      - "8020:8000"
     environment:
       - APP_ENV=local
       - APP_DEBUG=true
