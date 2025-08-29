@@ -10,8 +10,6 @@ services:
     working_dir: /var/www/
     volumes:
       - ./:/var/www
-    ports:
-      - "8000:8000"
     environment:
       - APP_ENV=local
       - APP_DEBUG=true
@@ -21,9 +19,4 @@ services:
       - FINTS_USERNAME=${FINTS_USERNAME}
       - FINTS_PIN=${FINTS_PIN}
       - API_PASSWORD=${API_PASSWORD}
-    networks:
-      - hbci-network
 
-networks:
-  hbci-network:
-    driver: bridge
